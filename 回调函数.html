@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+    </body>
+    <script type="text/javascript">
+    function aFunc(num,str,callback){
+        var local_value = "这是一个局部变量";
+        if(num < 18 && num > 0){
+            local_value = "还小，再长长";
+
+            callback(true,local_value);
+        }else{
+            local_value = "奋斗，努力挣钱养家";
+            callback(false,local_value);
+        }
+
+    }
+    function bFunc(flag,msg){
+        console.log(flag);
+        console.log(msg);
+    }
+
+    aFunc(160,"Hellow 回调函数",bFunc);
+
+    </script>
+</html>

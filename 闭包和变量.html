@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+
+    </body>
+    <script>
+        function aFunc(){
+            var local_value = "hellow javascript";
+            function closure(){
+                return local_value;
+            }
+            return closure();
+        }
+
+        let result = aFunc();
+        console.log("访问到的局部变量的值" , result);
+    </script>
+</html>

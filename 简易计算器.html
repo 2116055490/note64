@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>简易计算器</h2>
+        <label for="one">输入第一个数</label>
+        <input type="text" name="one" id="one">
+
+        <label for="two" >输入第二个数</label>
+        <input type="text" name="two" id="two">
+
+        <input type="button" value="求和" onclick="getSum()">
+        <label for="sum">结果</label>
+        <input type="text" name="sum" id="showSum">
+    </body>
+    <script>
+        function sum(a,b){
+            return a+b;
+        }
+        function getSum(){
+            let getFirst = document.getElementById("one");
+            let getSecond = document.getElementById("two");
+            let showE1 = document.getElementById("showSum");
+
+            let getFirstValue = parseInt(getFirst.value);
+            let getSecondValue = parseInt(getSecond.value);
+
+            showE1.value = getFirstValue + getSecondValue + "";
+        }
+    </script>
+</html>

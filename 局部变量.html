@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        //记录局部变量的值
+        function recordCount(){
+            var count = 0;
+            function closureFunc(){
+                count++;
+                return count;
+            }
+            return closureFunc;
+        }
+        var fn = recordCount();
+        result = fn();
+        console.log("访问到的局部变量的值",result);
+        result = fn();
+        console.log("访问到的局部变量的值",result);
+        result = fn();
+        console.log("访问到的局部变量的值",result);
+
+    </script>
+</html>
